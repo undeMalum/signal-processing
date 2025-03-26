@@ -1,9 +1,11 @@
+from pathlib import Path
+
 import pandas as pd
 import numpy as np
 import mne
 
 # Path to your CSV file
-csv_file = '/home/koutras/PAPEL/HMMY/Eggrafa/ERASMUS Coordinator/EUNICE Proposal/Decoding Life Signals/test_data/EEG_sample_recording.txt'
+csv_file = Path().cwd().resolve() / "lec_2/recordings/EEG_sample recording.txt" 
 
 # Read CSV while skipping metadata lines and stripping extra spaces
 df = pd.read_csv(csv_file, comment='%', skipinitialspace=True)
