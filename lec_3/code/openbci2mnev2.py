@@ -5,7 +5,7 @@ import numpy as np
 import mne
 
 # Path to your CSV file
-csv_file = Path().cwd().resolve() / "lec_2/recordings/EEG_sample recording.txt" 
+csv_file = Path().cwd() / "lec_2/recordings/EEG_sample recording.txt" 
 
 # Read CSV while skipping metadata lines and stripping extra spaces
 df = pd.read_csv(csv_file, comment='%', skipinitialspace=True)
